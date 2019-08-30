@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do
-	unless params[:nombre]
+	if params[:nombre].empty?
 		<<-HTML
 	 	<h1>Hola desconocido!</h1>
 	 	HTML
